@@ -5,21 +5,21 @@
 class Prke < Formula
   desc "PromptKeeper CLI (prke)."
   homepage "https://github.com/AI-Prompt-Keeper/promptkeeper"
-  version "0.0.6"
+  version "0.0.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.6/prkedarwin_amd64.tar.gz"
-      sha256 "7a74fcea237a58516c2639b7d7aef82395b0f915c7a69b2ebd1055c472054f98"
+      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.8/prkedarwin_amd64.tar.gz"
+      sha256 "07c9a93588758b8208651aca9604f55a3b91f49c0322e1018f75823950fa84cd"
 
       define_method(:install) do
         bin.install "prke"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.6/prkedarwin_arm64.tar.gz"
-      sha256 "b4955f58b3c2695dc3f177e4b2b4fde08dd56f6b6f168188da6450ff901e7993"
+      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.8/prkedarwin_arm64.tar.gz"
+      sha256 "f34cb14ca8cf9f2ecf05c7c182af1c888b6f5bafe2aaacdbefa72d606dca58a9"
 
       define_method(:install) do
         bin.install "prke"
@@ -29,15 +29,15 @@ class Prke < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.6/prkelinux_amd64.tar.gz"
-      sha256 "5966a30a76a88b3aea48aca8c701df11bd1df556c527726a83149258f394a41c"
+      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.8/prkelinux_amd64.tar.gz"
+      sha256 "9160415194303b2c65b4b4ffe4f8009b7e1bb537cc2ea0a229c1472d94db5f05"
       define_method(:install) do
         bin.install "prke"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.6/prkelinux_arm64.tar.gz"
-      sha256 "27ec6afd8d08755cc1f34c4f11ab1e13064d7e6840083422b05e39a78da0a94e"
+      url "https://github.com/AI-Prompt-Keeper/promptkeeper/releases/download/v0.0.8/prkelinux_arm64.tar.gz"
+      sha256 "d965964dd56ff95c8e7ffb2c907eface426c11af9c9d7d2ae617eb877de10144"
       define_method(:install) do
         bin.install "prke"
       end
